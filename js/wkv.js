@@ -1,3 +1,21 @@
+var endpoint="https://en.wikipedia.org/w/api.php"
+
+$(document).ready(function(){
+  $("#random").on("click", function(){
+    $.getJSON(endpoint+"?action=query&titles=Main%20%Page&prop=revisions&rvprop=content&format=jsonp", function(data){
+      console.log(data);
+    });
+  });
+
+});
+
+
+
+/* 
+
+NOTE: Commented out all the previous JS but left it here as a short term reference.
+I'll get rid of it all once my actual js for this project is more mature.
+
 // Let's be neat and tidy and declare all our Global variables up front
 latLon=0;
 latLonSepVal=0;
@@ -93,3 +111,4 @@ function displayWeatherData(){
 };
 
 
+*/
