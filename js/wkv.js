@@ -1,6 +1,5 @@
 var endpoint="https://en.wikipedia.org/w/api.php?";
 var test="action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
-var result = {};
 
 $(document).ready(function(){
   $("#random").on("click", function(){
@@ -17,7 +16,8 @@ $(document).ready(function(){
 });
 
 function storeData(data){
-  alert(data.batchcomplete[0]);
+  var result = data;
+  alert(result);
 };
 
 
