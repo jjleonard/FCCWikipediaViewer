@@ -16,8 +16,8 @@ $(document).ready(function(){
 });
 
 function storeData(data){
-  var result = data;
-  alert(result);
+  var result = JSON.stringify(data);
+  console.log(result);
 };
 
 
