@@ -10,15 +10,14 @@ $(document).ready(function(){
       },
       type: 'GET',
       dataType: 'jsonp',
-      jsonpCallback: storeData,
+      success: function(data){
+        var result = JSON.parse(data);
+        console.log(result);
+      },
     });
   });
 });
 
-function storeData(data){
-  var result = JSON.stringify(data);
-  console.log(result);
-};
 
 
 
