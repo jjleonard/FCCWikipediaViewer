@@ -1,13 +1,20 @@
-var endpoint="https://en.wikipedia.org/w/api.php"
+var endpoint="https://en.wikipedia.org/w/api.php?";
+var test="action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
 
 $(document).ready(function(){
   $("#random").on("click", function(){
-    $.getJSON(endpoint+"?action=query&titles=Main%20%Page&prop=revisions&rvprop=content&format=jsonp", function(data){
-      console.log(data);
+    $.ajax({
+      url: endpoint+test,
+      jsonp: false,
+      jsonpCallback: storeData,
     });
   });
 
 });
+
+function storeData(data){
+  console.log(data);
+};
 
 
 
