@@ -1,19 +1,23 @@
 var endpoint="https://en.wikipedia.org/w/api.php?";
 var test="action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
+var result = {};
 
 $(document).ready(function(){
   $("#random").on("click", function(){
     $.ajax({
       url: endpoint+test,
-      jsonp: false,
+      data: {
+        format: 'json'
+      },
+      type: 'GET',
+      dataType: 'jsonp',
       jsonpCallback: storeData,
     });
   });
-
 });
 
 function storeData(data){
-  console.log(data);
+  alert(data.batchcomplete[0]);
 };
 
 
