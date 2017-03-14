@@ -11,8 +11,9 @@ $(document).ready(function(){
       type: 'GET',
       dataType: 'jsonp',
       success: function(data){
-        var result = JSON.parse(data);
-        console.log(result);
+        alert(JSON.stringify(data));
+        var dataQuery = data.query.pages["15580374"].title;
+        alert(dataQuery);
       },
     });
   });
