@@ -12,8 +12,11 @@ $(document).ready(function(){
       dataType: 'jsonp',
       success: function(data){
         alert(JSON.stringify(data));
+        alert(data.query.pages["15580374"].title)
+        /*
         var dataQuery = data.query.pages["15580374"].title;
         alert(dataQuery);
+        */
       },
     });
   });
