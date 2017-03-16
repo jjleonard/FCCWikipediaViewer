@@ -1,5 +1,5 @@
 var endpoint="https://en.wikipedia.org/w/api.php?";
-var test="action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
+var test="action=query&list=random&rnlimit=1&rnnamespace=0&format=json";
 
 $(document).ready(function(){
   $("#random").on("click", function(){
@@ -17,7 +17,10 @@ $(document).ready(function(){
 
 function display(data){
   alert(JSON.stringify(data));
-  alert(data.query.pages["15580374"].title)
+  var tempVar = data.query.random[0].title;
+  alert(tempVar);
+  $("#wkPageTitle").html(tempVar);
+  // alert(data.query.pages["15580374"].title);
 };
 
 
