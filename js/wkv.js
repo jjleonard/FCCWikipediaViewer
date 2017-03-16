@@ -11,16 +11,30 @@ $(document).ready(function(){
       type: 'GET',
       dataType: 'jsonp',
       jsonpCallback: "display",
+<<<<<<< HEAD
+=======
+      /*
+      success: function(data){
+        var dataQuery = data.query.pages["15580374"].title;
+        alert(dataQuery);
+
+      },
+      */
+>>>>>>> 24a3cd4e16aee0445972d58c94c0ff7c422d3593
     });
   });
 });
 
 function display(data){
   alert(JSON.stringify(data));
+<<<<<<< HEAD
   var tempVar = data.query.random[0].title;
   alert(tempVar);
   $("#wkPageTitle").html(tempVar);
   // alert(data.query.pages["15580374"].title);
+=======
+  alert(data.query.pages["15580374"].title)
+>>>>>>> 24a3cd4e16aee0445972d58c94c0ff7c422d3593
 };
 
 
