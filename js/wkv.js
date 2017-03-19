@@ -9,6 +9,11 @@ $(document).ready(function(){
         format: 'json'
       },
       type: 'GET',
+      // Api-User_agent below is recommended when 
+      // querying so they can identify you - format is free-form
+      headers: {
+        'Api-User-Agent': 'jjleonard@gmail.com' 
+      },
       dataType: 'jsonp',
       jsonpCallback: "display",
     });
