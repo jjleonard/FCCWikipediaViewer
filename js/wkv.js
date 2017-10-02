@@ -1,6 +1,6 @@
 var endpoint="https://en.wikipedia.org/w/api.php?";
 /* var test="action=query&list=random&rnlimit=1&rnnamespace=0&format=json"; */
-var test="action=query&list=search&srsearch='Albert Einstein'&format=json"
+var test="action=opensearch&search=Apple&limit=10&namespace=0&format=json";
 
 $(document).ready(function(){
   $("#random").on("click", function(){
@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 function display(data){
   alert(JSON.stringify(data));
-  var tempVar = data.query.search[0].snippet;
+  var tempVar = data[0][0];
   alert(tempVar);
   $("#wkPageTitle").html(tempVar);
   // alert(data.query.pages["15580374"].title);
