@@ -20,18 +20,21 @@
         </div> <!-- /col-sm-6 -->
       </div> <!-- /row header -->
       <div class="row search">
-        <div class="col-sm-6 col-sm-offset-3 text-center">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button id="search" class="btn btn-default" type="button">Go!</button>
-            </span>
-          </div> <!-- input-group -->
-        </div> <!-- /col-sm-6 -->
+        <form>
+          <div class="col-sm-6 col-sm-offset-3 text-center">
+            <div class="input-group">
+              <input id="search" type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Go!</button>
+              </span>
+            </div> <!-- input-group -->
+          </div> <!-- /col-sm-6 -->
+        </form>
       </div> <!-- /row search -->
       <div class="row results">
-        <div class="col-sm-6 col-sm-offset-3 text-center wkPageTitles">
-          <ul></ul>
+        <div class="col-sm-6 col-sm-offset-3 wkPageTitles">
+          <div class="list-group">
+          </div> <!-- /list-group -->
         </div> <!-- /col-sm-6 -->
       </div> <!-- /row results -->
       <div class="row buttons">
