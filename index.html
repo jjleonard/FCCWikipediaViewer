@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <!-- required to enable bootstrap and the CSS functions -->
     <link rel="stylesheet" href="css/wkv.css">
-    <!-- css content for styling, obvs -->
+    <!-- css content for styling, (currently empty, but available) -->
     <script type="text/javascript" src="libs/jquery-3.1.1.min.js"></script>
     <!-- required for general purpose jQuery work --> 
     <script type="text/javascript" src="js/wkv.js"></script>
@@ -14,12 +14,14 @@
   </head>
   <body>
     <div class="container-fluid">
+
       <div class="row header">
         <div class="col-sm-6 col-sm-offset-3 text-center">
           <h1>FCC Project - Wikipedia Viewer</h1>
         </div> <!-- /col-sm-6 -->
       </div> <!-- /row header -->
-      <div class="row search">
+
+      <div class="row searchWikipedia">
         <form>
           <div class="col-sm-6 col-sm-offset-3 text-center">
             <div class="input-group">
@@ -27,21 +29,22 @@
               <span class="input-group-btn">
                 <button class="btn btn-default" type="submit">Go!</button>
               </span>
+              <span class="input-group-btn">
+                <button id="random" class="btn btn-default" type="submit">Surprise Me</button>
+              </span>
             </div> <!-- input-group -->
           </div> <!-- /col-sm-6 -->
         </form>
-      </div> <!-- /row search -->
+      </div> <!-- /row searchWikipedia -->
+
       <div class="row results">
         <div class="col-sm-6 col-sm-offset-3 wkPageTitles">
           <div class="list-group">
+            <!-- <a> elements will be inserted here by jQuery once the search is complete -->
           </div> <!-- /list-group -->
         </div> <!-- /col-sm-6 -->
       </div> <!-- /row results -->
-      <div class="row buttons">
-        <div class="col-sm-6 col-sm-offset-3">
-          <button id="random" class="btn btn-default" type="button">Random</button>
-        </div> <!-- //col-sm-6 -->
-      </div> <!-- /row buttons -->
+
     </div> <!-- /container -->
   </body>
 </html>
